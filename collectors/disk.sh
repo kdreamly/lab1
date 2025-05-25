@@ -1,3 +1,4 @@
 #!/bin/bash
 echo "====== Disk Usage ======"
-df -h
+df / | tail -1 | awk '{print $5}'
+
